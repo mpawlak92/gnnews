@@ -3,7 +3,6 @@ import ArticleBox from '../ArticleBox/ArticleBox';
 import './ArticlesBoxes.scss';
 
 const ArticlesBoxes = ({ data }) => {
-  console.log(data[0]);
   return (
     <div className="articlesBoxes">
       {data.map((article) => (
