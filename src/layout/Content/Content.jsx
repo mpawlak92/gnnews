@@ -1,4 +1,3 @@
-import './Content.scss';
 import axios from 'axios';
 import propTypes from 'prop-types';
 import { useEffect, useState } from 'react';
@@ -28,7 +27,7 @@ const Content = ({ country }) => {
     fetchData();
   }, [country]);
   return (
-    <div className="content">
+    <div>
       {viewState === true ? (
         <ArticlesList data={data} />
       ) : (
