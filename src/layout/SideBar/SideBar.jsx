@@ -21,17 +21,17 @@ const SideBar = () => {
   const sideMenuTextToggle = click
     ? 'sidebarContainerLink__text--isactive '
     : '';
-
+  const sideBarToggle = click ? 'sidebar--isactive ' : '';
   const menuBtnToggle = click ? 'sidebar-btn--clicked ' : '';
   return (
-    <>
+    <div className="sidebarContainer">
       <button
         className={menuBtnToggle + 'sidebar-btn'}
         onClick={handleMenuClick}
         aria-label="Hamburger menu"
       ></button>
 
-      <div className="sidebarContainer">
+      <div className={sideBarToggle + 'sidebar '}>
         <div className={sideMenuToggle + 'slickBar'}>
           <NavLink
             end
@@ -187,7 +187,7 @@ const SideBar = () => {
           </NavLink>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

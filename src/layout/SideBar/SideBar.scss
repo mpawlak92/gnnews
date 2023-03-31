@@ -1,15 +1,28 @@
+.sidebarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  padding-top: 8.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
 .sidebar-btn {
-  position: relative;
-  top: 10rem;
+  position: absolute;
+  top: 10px;
   width: 6rem;
   height: 6rem;
-  margin: 0.5rem 0 0 0.5rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
   background-color: black;
-  border: none;
+  border: 2px solid #fff;
   border-radius: 50%;
   cursor: pointer;
   z-index: 100;
@@ -26,7 +39,7 @@
   }
   &::before {
     content: '';
-    top: 2.6em;
+    top: 2.4em;
   }
 
   &::after {
@@ -35,27 +48,29 @@
   }
 
   &--clicked::before {
-    top: 2.9em;
+    top: 2.8em;
     transform: rotate(135deg);
   }
   &--clicked::after {
-    top: 2.9em;
+    top: 2.8em;
     transform: rotate(-135deg);
   }
 }
 
-.sidebarContainer {
+.sidebar {
   position: relative;
+  left: -8rem;
   width: 8rem;
-  max-height: 80vh;
-  margin-top: 12rem;
-  padding: 4rem 0;
+  padding: 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #09090c;
   border-radius: 0 30px 30px 0;
   z-index: 100;
+  &--isactive {
+    left: 0;
+  }
 }
 .sidebarContainerLink {
   display: flex;
@@ -103,14 +118,27 @@
   flex-direction: column;
   align-items: flex-start;
   width: 8rem;
-  padding: 4rem 0;
+  padding: 1rem 0;
   list-style: none;
   color: white;
   background-color: #09090c;
-  border-radius: 0 30px 30px 0;
+  border-radius: 0 8px 8px 0;
   transition: width 0.5s;
   overflow: hidden;
   &--isactive {
     width: 25rem;
+  }
+}
+@media (min-width: 600px) and (min-height: 965px) {
+  .sidebar {
+    left: 0;
+    padding: 4rem 0;
+  }
+  .sidebar-btn {
+    position: relative;
+  }
+  .slickBar {
+    padding: 4rem 0;
+    border-radius: 0 30px 30px 0;
   }
 }
