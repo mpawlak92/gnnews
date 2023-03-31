@@ -1,0 +1,116 @@
+.sidebar-btn {
+  position: relative;
+  top: 10rem;
+  width: 6rem;
+  height: 6rem;
+  margin: 0.5rem 0 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 3em;
+    background-color: white;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+  }
+  &::before {
+    content: '';
+    top: 2.6em;
+  }
+
+  &::after {
+    content: '';
+    top: 3.4em;
+  }
+
+  &--clicked::before {
+    top: 2.9em;
+    transform: rotate(135deg);
+  }
+  &--clicked::after {
+    top: 2.9em;
+    transform: rotate(-135deg);
+  }
+}
+
+.sidebarContainer {
+  position: relative;
+  width: 8rem;
+  max-height: 80vh;
+  margin-top: 12rem;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #09090c;
+  border-radius: 0 30px 30px 0;
+  z-index: 100;
+}
+.sidebarContainerLink {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.3;
+
+  &:hover {
+    width: 100%;
+    border-right: 10px solid #089b25;
+    opacity: 1;
+  }
+
+  &--active {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-right: 10px solid #089b25;
+    opacity: 1;
+  }
+
+  &__text {
+    width: 0;
+    margin-left: 1.2em;
+    font-size: 2rem;
+
+    &--isactive {
+      width: 15rem;
+    }
+  }
+}
+.flag {
+  margin-left: 1rem;
+}
+.slickBar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 8rem;
+  padding: 4rem 0;
+  list-style: none;
+  color: white;
+  background-color: #09090c;
+  border-radius: 0 30px 30px 0;
+  transition: width 0.5s;
+  overflow: hidden;
+  &--isactive {
+    width: 25rem;
+  }
+}
