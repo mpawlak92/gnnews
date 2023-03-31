@@ -25,12 +25,13 @@ const Content = ({ country }) => {
   };
   useEffect(() => {
     fetchData();
-  }, [country]);
+    handleNewPostsNumber();
+  }, [country, data]);
 
   const handleNewPostsNumber = () => {
     dispatch(seveNewPostsNuber(data.length));
   };
-  handleNewPostsNumber();
+
   return <RenderArticles data={data} />;
 };
 
