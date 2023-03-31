@@ -1,0 +1,64 @@
+.info-btn {
+  width: 5erm;
+  aspect-ratio: 6/1;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 2.2rem;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background-color: #000000;
+  cursor: pointer;
+}
+
+.info-popup-header {
+  width: calc(100% - 40px);
+  margin-bottom: 1.5rem;
+  padding: 0.2em 0.5em;
+  font-size: 0.8em;
+  color: #fff;
+  background-color: #089b2583;
+  border-radius: 2px;
+
+  & > div {
+    padding: 0.2em;
+  }
+  &--red {
+    width: calc(100% - 40px);
+    margin-bottom: 1.5rem;
+    padding: 0.2em 0.5em;
+    font-size: 0.8em;
+    color: #fff;
+    background-color: #9b250883;
+    border-radius: 2px;
+  }
+}
+.info-popup-text {
+  font-size: 0.5em;
+  margin-bottom: 2rem;
+}
+.info-popup-content {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 0.5em 0.5em;
+  font-size: 0.5em;
+  background-color: #089b251a;
+  border-radius: 4px;
+  box-shadow: 0 8px 22px -12px rgba(0, 0, 0, 0.64);
+}
+.info-popup-thanks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.4em;
+
+  .thanks {
+    margin: 0.4em 0;
+  }
+}
+@media (min-width: 500px) {
+  .info-btn {
+    width: 10rem;
+  }
+}
