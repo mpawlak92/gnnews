@@ -2,6 +2,7 @@
   text-decoration: none;
 }
 .header__logo {
+  margin-left: 6rem;
   padding: 0 0.1em;
   font-size: 8em;
   color: white;
@@ -15,5 +16,10 @@
   }
   &:hover {
     cursor: pointer;
+  }
+}
+@media (min-width: 600px) and (min-height: 965px) {
+  .header__logo {
+    margin-left: 0;
   }
 }
