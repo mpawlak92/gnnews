@@ -1,0 +1,19 @@
+.logo-link {
+  text-decoration: none;
+}
+.header__logo {
+  padding: 0 0.1em;
+  font-size: 8em;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+
+  .logo-decoration {
+    padding: 0 0.1em 0.1em 0.1em;
+    border-radius: 25%;
+    color: white;
+    background-color: #089b25;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
