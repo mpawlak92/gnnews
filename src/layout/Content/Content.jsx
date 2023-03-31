@@ -1,15 +1,11 @@
 import axios from 'axios';
 import propTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import ArticlesList from '../../components/ArticlesList/ArticlesList';
-import ArticlesBoxes from '../../components/ArticlesBoxes/ArticlesBoxes';
-import { useSelector } from 'react-redux';
-import { listViewState } from '../../slices/ViewSlice';
+import RenderArticles from '../../components/RenderArticles/RenderArticles';
 
 const Content = ({ country }) => {
   const [data, setData] = useState([]);
 
-  const viewState = useSelector(listViewState);
   const url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=3c320fceb0f24a0dac73250963458ed0`;
 
   const fetchData = () => {
@@ -26,15 +22,7 @@ const Content = ({ country }) => {
   useEffect(() => {
     fetchData();
   }, [country]);
-  return (
-    <div>
-      {viewState === true ? (
-        <ArticlesList data={data} />
-      ) : (
-        <ArticlesBoxes data={data} />
-      )}
-    </div>
-  );
+  return <RenderArticles data={data} />;
 };
 
 export default Content;
