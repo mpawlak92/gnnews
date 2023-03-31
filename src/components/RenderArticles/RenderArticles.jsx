@@ -7,10 +7,18 @@ import './RenderArticles.scss';
 
 const RenderArticles = ({ data }) => {
   const viewState = useSelector(listViewState);
+  const tooggleRenderStyles = viewState ? 'articlesList' : 'articlesBoxes ';
   return (
-    <div className="articlesBoxes">
+    <div className={tooggleRenderStyles}>
       {data.map((article) =>
         viewState ? (
+          <ArticlesListItem
+            key={article.title}
+            title={article.title}
+            source={article.source.name}
+            publishedDate={article.publishedAt}
+          />
+        ) : (
           <ArticleBox
             key={article.title}
             img={article.urlToImage}
@@ -21,13 +29,6 @@ const RenderArticles = ({ data }) => {
             author={article.author}
             url={article.url}
             content={article.content}
-          />
-        ) : (
-          <ArticlesListItem
-            key={article.title}
-            title={article.title}
-            source={article.source.name}
-            publishedDate={article.publishedAt}
           />
         )
       )}
