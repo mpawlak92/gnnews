@@ -17,6 +17,9 @@ const RenderArticles = ({ data }) => {
             title={article.title}
             source={article.source.name}
             publishedDate={article.publishedAt}
+            author={article.author}
+            url={article.url}
+            content={article.content}
           />
         ) : (
           <ArticleBox
