@@ -5,3 +5,16 @@
   font-size: 62.5%;
   font-family: 'Roboto Mono', monospace;
 }
+html {
+  margin-top: 10rem;
+}
+.App {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 600px) and (min-height: 965px) {
+  html {
+    margin-left: 8rem;
+  }
+}
