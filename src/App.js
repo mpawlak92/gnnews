@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css';
 import Content from './layout/Content/Content';
+import Footer from './layout/Footer/Footer';
 import Header from './layout/Header/Header';
 import SideBar from './layout/SideBar/SideBar';
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/country/china" element={<Content country="cn" />} />
         <Route path="/country/hungary" element={<Content country="hu" />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

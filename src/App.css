@@ -9,8 +9,10 @@ html {
   margin-top: 10rem;
 }
 .App {
+  position: relative;
   display: flex;
   justify-content: center;
+  padding-bottom: 8rem;
 }
 
 @media (min-width: 600px) and (min-height: 965px) {

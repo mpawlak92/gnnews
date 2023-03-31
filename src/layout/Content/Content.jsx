@@ -2,9 +2,13 @@ import axios from 'axios';
 import propTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import RenderArticles from '../../components/RenderArticles/RenderArticles';
+import { useDispatch } from 'react-redux';
+import { seveNewPostsNuber } from '../../slices/FooterSlice';
 
 const Content = ({ country }) => {
   const [data, setData] = useState([]);
+
+  const dispatch = useDispatch();
 
   const url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=3c320fceb0f24a0dac73250963458ed0`;
 
@@ -22,6 +26,11 @@ const Content = ({ country }) => {
   useEffect(() => {
     fetchData();
   }, [country]);
+
+  const handleNewPostsNumber = () => {
+    dispatch(seveNewPostsNuber(data.length));
+  };
+  handleNewPostsNumber();
   return <RenderArticles data={data} />;
 };
 
