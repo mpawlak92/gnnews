@@ -19,6 +19,7 @@ const Content = ({ country }) => {
         if (response.request.status === 200) {
           const allData = response.data.articles;
           setData(allData);
+          console.log('fetch');
         }
       })
       .catch((error) => console.error(error));
@@ -26,11 +27,11 @@ const Content = ({ country }) => {
   useEffect(() => {
     fetchData();
     handleNewPostsNumber();
-  }, [country, data]);
-
+  }, [country]);
   const handleNewPostsNumber = () => {
     dispatch(seveNewPostsNuber(data.length));
   };
+  handleNewPostsNumber();
 
   return <RenderArticles data={data} />;
 };
