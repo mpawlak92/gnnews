@@ -1,7 +1,5 @@
 {
-  "homepage": "http://mpawlak92.github.io/gnnews",
-  "name": "gnnews",
-  "version": "1.0.0",
+  "homepage": "http://mpawlak92.github.io/gnNews",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
