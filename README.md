@@ -1,3 +1,8 @@
+Aby odpalić projekt trzeba pobrać go na komputer i odpalić lokalnie, ponieważ darmowa wersia API z której korzysta projekt, pozwala jedynie na zapytania z localhost.
+
+
+
+
 # gnNews - gnStudio React.js developer challenge
 
 Witaj, jeżeli znalazłeś się w tym miejscu to najprawdopodobniej chcesz dołączyć do niesamowitego teamu tworzącego rozwiązania szyte na miarę i chcesz w końcu realizować projekty, które nie będą nudne, będą sprawiały Ci frajdę i będą napawały Cię dumą kiedy tylko o nich pomyślisz.
