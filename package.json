@@ -1,5 +1,6 @@
 {
-  "name": "ngnews",
+  "homepage": "http://mpawlak92.github.io/gnnews",
+  "name": "gnnews",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -19,6 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -49,6 +51,7 @@
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
+    "gh-pages": "^5.0.0",
     "prettier": "2.8.4"
   }
 }
