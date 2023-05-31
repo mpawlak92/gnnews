@@ -1,0 +1,26 @@
+.logo-link {
+  text-decoration: none;
+}
+
+.header__logo {
+  margin-left: 6rem;
+  padding: 0 0.1em;
+  font-size: 8em;
+  color: white;
+  font-family: "Nunito", sans-serif;
+}
+.header__logo .logo-decoration {
+  padding: 0 0.1em 0.1em 0.1em;
+  border-radius: 25%;
+  color: white;
+  background-color: #089b25;
+}
+.header__logo:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 600px) and (min-height: 965px) {
+  .header__logo {
+    margin-left: 0;
+  }
+}/*# sourceMappingURL=Logo.css.map */

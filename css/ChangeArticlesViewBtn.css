@@ -1,0 +1,29 @@
+.change-view-btn {
+  width: 3rem;
+  aspect-ratio: 1/1;
+  margin: 0 2rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: #000000;
+  cursor: pointer;
+}
+
+.buleted-list-view {
+  background-image: url("../../assets/bulleted-list.png");
+  background-position: center center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+
+.thumbinal-view {
+  background-image: url("../../assets/thumbnail.png");
+  background-position: center center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 500px) {
+  .change-view-btn {
+    width: 5rem;
+  }
+}/*# sourceMappingURL=ChangeArticlesViewBtn.css.map */
