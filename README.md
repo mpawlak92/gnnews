@@ -1,33 +1,48 @@
-# gnNews - gnStudio React.js developer challenge
+Aby odpalić projekt trzeba pobrać go na komputer i odpalić lokalnie, ponieważ darmowa wersia API z której korzysta projekt, pozwala jedynie na zapytania z localhost.
 
-Witaj, jeżeli znalazłeś się w tym miejscu to najprawdopodobniej chcesz dołączyć do niesamowitego teamu tworzącego rozwiązania szyte na miarę i chcesz w końcu realizować projekty, które nie będą nudne, będą sprawiały Ci frajdę i będą napawały Cię dumą kiedy tylko o nich pomyślisz.
+# gnNews
 
-Cóż, projekty są różne, więc może tak właśnie być, a może być zupełnie odwrotnie 😉 Możemy Ci jedynie zagwarantować, że nie będziesz się nudzić.
+Aplikacja polegać będzie na wyświetlaniu newsów. Źródłem newsów może być dowolne publiczne API, które daje taką możliwość. Możesz też skorzystać z https://newsapi.org/s/poland-news-api
 
-## O zadaniu
+Ekran aplikacji powinien być podzielony na:
 
-Abyśmy mogli bliżej poznać Twoje umiejętności techniczne, stopień zaangażowania oraz sposób myślenia, przygotowaliśmy dla Ciebie zadanie polegające na stworzeniu prostej aplikacji będącej "agregatorem newsów" szumnie nazwanej przez nas roboczo **gnNews**.
+- Header
+- Menu boczne
+- Główny content
+- Footer
 
-To na czym nam zależy to przede wszystkim czytelny kod, działająca aplikacja i UI, który nie wygląda jak konar ciosany tępym scyzorykiem (hint: pamiętaj o RWD, ale ciii, nie mów nikomu, że Ci podpowiedziałem 😉)
+## Header
 
-## Następne kroki
+Powinien zawierać:
 
-- wykonaj forka tego repozytorium jako prywatne repo
-- postępuj z instrukcjami zawartymi w [opis-zadania.md](./opis-zadania.md)
-- rozwiąż zadanie najlepiej jak potrafisz
-- dodaj użytkownika [gn-studio-pl](https://github.com/gn-studio-pl) do repozytorium
+- nazwę naszej wspaniałej aplikacji, która będzie linkiem przekierowującym na główną stronę aplikacji
+- przycisk umożliwiający zmianę widoku wyświetlanych newsów (możliwe opcje: lista, kafelki) - do przechowywania stanu wybranej opcji wykorzystaj redux'a
+- przycisk, po którego przyciśnięciu otworzy się popup. Niech treścią popupu będzie opis tego, co sprawiło Ci największą trudność w tym zadaniu oraz co sprawiło Ci największą frajdę.
 
-## Uwagi
+## Menu boczne
 
-- aplikację wykonaj w oparciu o React.js, wykorzystanie TypeScript'u bedzie mile widziane i dodatkowo punktowane
-- wykorzystaj nastepujace biblioteki: Redux toolkit, react-test-lib. Może odbierzesz to jako wychodzenie z armatą na muchy ale korzystamy z nich w naszych projektach i chcemy wiedziec czy czujesz się w nich dobrze
-- nie musisz tworzyć całego UI samemu, możesz skorzystać z dowolnej biblioteki UI
-- nie ma tutaj limitu czasu (poza wyznaczonym deadlinem), ale zalecamy, abyś nie spędzał nad tym zadaniem więcej jak 12 godzin
-- staraj się napisać swój kod najlepiej jak potrafisz
-- otestowanie przynajmniej części aplikacji mile widziane 😉
+Powinno zawierać:
 
-## Pytania?
+- listę Państw (nie muszą być wszystkie)
+- miło będzie zobaczyć flagę danego kraju przed jego nazwą 😉
 
-Jeżeli masz jakiekolwiek pytania co do wykonywanego zadania, bądź coś nie jest dla Ciebie jasne, albo masz trudności na którymś etapie, nie krępuj się - dzwoń, pisz - wyjaśnimy (chyba 😛)
+Kliknięcie na dane Państwo powinno przekierować użytkownika na stronę z newsami dla danego państwa. Niech struktura urla będzie następująca: `/country/[kraj]`
 
-## Powodzenia!
+## Główny content
+
+Powinien zawierać newsy w postaci listy bądź kafelek (w zależności od wybranej opcji w headerze).
+
+Lista powinna zawierać takie pozycje jak: tytuł, nazwa źródła oraz data publikacji
+
+Kafelki powinny zawierać dodatkowo miniaturkę (jeżeli występuje) oraz zajawkę.
+
+Kliknięcie na danego newsa powinno otworzyć popupa z jego treścią, a także autorem oraz urlem do strony, skąd dany news został pobrany.
+
+## Footer
+
+Powinien zawierać:
+
+- aktualną godzinę
+- liczbę artykułów, które są wyświetlane w głównym contencie
+
+
